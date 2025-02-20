@@ -1,0 +1,69 @@
+/* Partners Page Specific Styles */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: 100%;
+  margin: 12vh auto 5vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.event-section {
+  flex: 0 0 calc(33.33% - 20px);
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.event-section a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.event-section h2 {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  margin-bottom: 10px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-section p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Fixed Image Styles */
+.slider {
+  width: 70%;
+  height: 210px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive Adjustments for Partners Page */
+@media (max-width: 1024px) {
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .event-section {
+    flex: 0 0 90%;
+    margin-bottom: 20px;
+  }
+}

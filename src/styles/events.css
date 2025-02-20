@@ -1,0 +1,105 @@
+/* Events Page Specific Styles */
+.content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 12vh auto 5vh auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.event-section {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 5px;
+  /* Fixed height for each event card */
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.event-section p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Arrow Buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.3em 0.6em;
+  cursor: pointer;
+  border-radius: 3px;
+  user-select: none;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Responsive Adjustments for Events Page */
+@media (max-width: 768px) {
+  .content {
+    width: 95%;
+    padding: 15px;
+  }
+  .event-section {
+    height: auto;
+  }
+  .slideshow-container {
+    height: 200px;
+  }
+}
+
+/* Light Mode Overrides specific to Events Page */
+@media (prefers-color-scheme: light) {
+  .content {
+    background-color: rgba(9, 16, 32, 0.1);
+  }
+}

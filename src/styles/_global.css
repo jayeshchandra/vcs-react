@@ -1,0 +1,195 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Base Styles for All Pages */
+html, body {
+  background-color: #091020;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* HEADER (NAVBAR) */
+.navbar {
+  width: 90vw;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: #091020;
+  padding: 1vh 1vw;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.developer-tag {
+  width: 100%;
+  text-align: right;
+  font-size: 69%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: clamp(40px, 6vh, 60px);
+  width: auto;
+  filter: invert(1);
+}
+
+.site-title {
+  font-size: clamp(1.2rem, 4vw, 1.7rem);
+  font-weight: 300;
+  letter-spacing: 0.023em;
+  text-align: center;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 1vw;
+}
+
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-icon {
+  width: clamp(20px, 5vw, 30px);
+  height: clamp(18px, 4vw, 25px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  display: block;
+  height: clamp(2px, 0.5vw, 4px);
+  background: #fff;
+  border-radius: 2px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 5px);
+  background-color: #F6EFDF;
+  color: #091020;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #091020;
+  font-weight: bold;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+/* FOOTER */
+footer {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 2vh auto;
+  padding: 1vh 1vw;
+  text-align: center;
+  font-size: 0.96rem;
+}
+
+.developer-tag img {
+  height: 23.96px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* TERMS & CONDITIONS */
+.terms-conditions details {
+  background: none;
+  color: #aaa;
+  padding: 0;
+  margin-top: 1vh;
+  font-size: 0.596rem;
+  text-align: left;
+  display: block;
+  margin-bottom: 18px;
+  line-height: 1.96;
+}
+
+.terms-conditions summary {
+  cursor: pointer;
+  outline: none;
+  text-align: left;
+}
+
+/* LIGHT MODE OVERRIDES (Common) */
+@media (prefers-color-scheme: light) {
+  html, body {
+    background-color: #F6EFDF;
+    color: #091020;
+  }
+  
+  .navbar {
+    background-color: #F6EFDF;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+  }
+  
+  .site-title {
+    color: #091020;
+  }
+  
+  .hamburger-icon span {
+    background: #091020;
+  }
+  
+  .dropdown {
+    background-color: #091020;
+    color: #fff;
+  }
+  
+  .dropdown a {
+    color: #fff;
+  }
+  
+  .dropdown a:hover {
+    background-color: #222;
+  }
+  
+  .logo img {
+    filter: invert(0);
+  }
+  
+  .developer-tag img {
+    filter: invert(1);
+  }
+}
