@@ -95,11 +95,13 @@ export default function Events() {
         <section className="events-grid">
           {eventsData.map((event, idx) => (
             <div key={idx} className="event-card">
+              {/* Slideshow first */}
+              <Slideshow images={event.images} />
+              {/* Event info below */}
               <div className="event-info">
                 <h2>{event.title}</h2>
                 <p>{event.description}</p>
               </div>
-              <Slideshow images={event.images} />
             </div>
           ))}
         </section>

@@ -1,3 +1,8 @@
+/* Global Box Sizing */
+* {
+  box-sizing: border-box;
+}
+
 /* Container & Dynamic Background */
 .events-container {
   position: relative;
@@ -48,11 +53,18 @@
 /* Grid Layout for Event Cards */
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: 1fr; /* Force single column by default */
   gap: 40px;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+/* Use two columns on wider screens */
+@media (min-width: 768px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Event Card Styles */
@@ -64,14 +76,16 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease;
+  overflow: hidden;
 }
 
 .event-card:hover {
   transform: translateY(-5px);
 }
 
+/* Place text below the slideshow */
 .event-info {
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .event-info h2 {
