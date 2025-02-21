@@ -1,73 +1,77 @@
-/* Rules Page Specific Styles */
-.content {
-  width: 90%;
-  max-width: 800px;
-  margin: 15vh auto 5vh auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 5px;
-}
-
-.intro {
-  text-align: center;
-  margin: 2vh 1vw;
-  font-size: clamp(1rem, 2.5vw, 2rem);
-  max-width: 800px;
-  padding: 0 1vw;
-}
-
-.intro_subtitle {
-  font-size: 0.696em;
-  font-style: italic;
-  margin-top: 0.69em;
-}
-
-.gallery-container {
-  width: 85vh;
-  height: 85vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 1vh;
+/* Container & Layout */
+.rules-container {
   position: relative;
-  margin: 2vh 0;
-}
-
-.tile {
-  background-color: black;
-  overflow: hidden;
-  perspective: 1000px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-}
-
-.tile img {
+  background-color: #091020;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s;
-  backface-visibility: hidden;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-/* Responsive Adjustments for Rules Page */
-@media (max-aspect-ratio: 1/1) {
-  .gallery-container {
-    width: 90vw;
-    height: 90vw;
+/* Dynamic Background (mirrors home.css) */
+.dynamic-background {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+  animation: moveBackground 20s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+  filter: none !important;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translate(0, 0);
   }
-  .logo img {
-    height: clamp(30px, 5vh, 50px);
+  50% {
+    transform: translate(-25%, -25%);
   }
-  .site-title {
-    font-size: clamp(1rem, 3.5vw, 1.8rem);
+  100% {
+    transform: translate(0, 0);
   }
 }
 
-@media (min-aspect-ratio: 16/9) {
-  .gallery-container {
-    width: 75vh;
-    height: 75vh;
+/* Main Content Styling */
+.rules-content {
+  position: relative;
+  z-index: 2;
+  padding: 120px 20px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ffffff;
+  text-align: justify;
+}
+
+.rules-content h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Rules Text Styling */
+.rules-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.rules-text p strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rules-content {
+    padding: 100px 15px 20px;
+  }
+  .rules-content h1 {
+    font-size: 2rem;
+  }
+  .rules-text p {
+    font-size: 1rem;
   }
 }

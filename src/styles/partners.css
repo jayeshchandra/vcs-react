@@ -1,69 +1,120 @@
-/* Partners Page Specific Styles */
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  gap: 20px;
+/* Container & Layout */
+.partners-container {
+  position: relative;
+  background-color: #091020; /* Same background color as home */
   width: 100%;
-  margin: 12vh auto 5vh;
-  padding: 20px;
-  box-sizing: border-box;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.event-section {
-  flex: 0 0 calc(33.33% - 20px);
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  border-radius: 5px;
-  box-sizing: border-box;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+/* Dynamic Background (same as home for consistency) */
+.dynamic-background {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+  animation: moveBackground 20s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+  filter: none !important;
 }
 
-.event-section a {
+@keyframes moveBackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-25%, -25%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Main Content Styling */
+.partners-content {
+  position: relative;
+  z-index: 2;
+  padding: 120px 20px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.partners-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout for Partner Cards */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Partner Card Styling */
+.partner-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.partner-card a {
   text-decoration: none;
   color: inherit;
 }
 
-.event-section h2 {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  margin-bottom: 10px;
-  text-align: center;
-  white-space: nowrap;
+.partner-image {
   overflow: hidden;
-  text-overflow: ellipsis;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.event-section p {
-  font-size: 1em;
-  line-height: 1.6;
+.partner-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.partner-card a:hover .partner-image img {
+  transform: scale(1.05);
+}
+
+.partner-card h2 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.partner-card p {
+  font-size: 1rem;
+  line-height: 1.5;
   margin-top: 10px;
 }
 
-/* Fixed Image Styles */
-.slider {
-  width: 70%;
-  height: 210px;
-  margin: 0 auto 20px;
-  overflow: hidden;
-  border-radius: 5px;
-}
-
-.slider img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Responsive Adjustments for Partners Page */
-@media (max-width: 1024px) {
-  .content {
-    flex-wrap: wrap;
-    justify-content: center;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .event-section {
-    flex: 0 0 90%;
-    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+  .partners-content h1 {
+    font-size: 2rem;
   }
 }

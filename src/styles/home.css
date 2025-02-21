@@ -1,72 +1,116 @@
-/* Homepage Specific Styles */
-.content {
-  margin-top: 6.96vh; /* offset for fixed navbar */
+/* Container & Layout */
+.home-container {
+  position: relative;
+  background-color: #091020;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.intro {
+.home-content {
+  position: relative;
+  z-index: 2;
+  padding: 69px 20px 20px;
   text-align: center;
-  margin: 2vh 1vw;
-  font-size: clamp(1rem, 2.5vw, 2rem);
-  max-width: 800px;
-  padding: 0 1vw;
 }
 
-.intro_subtitle {
-  font-size: 0.696em;
-  font-style: italic;
-  margin-top: 0.69em;
+/* Intro Text */
+.intro-text h1,
+.intro-text h2 {
+  margin-bottom: 20px;
 }
 
-.gallery-container {
-  width: 85vh;
-  height: 85vh;
+.intro-text h1 {
+  font-size: 2.5rem;
+}
+
+.intro-text h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Gallery Grid: 3x3 fixed-size, landscape boxes */
+.gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 1vh;
-  position: relative;
-  margin: 2vh 0;
+  gap: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.tile {
-  background-color: black;
+/* Gallery Item Container: Uses aspect-ratio for fixed, landscape slots */
+.gallery-item-container {
+  width: 100%;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
-  perspective: 1000px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
+  border-radius: 8px;
+  position: relative;
 }
 
-.tile img {
+/* Gallery Item: Fading transitions for image changes */
+.gallery-item {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
-  backface-visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
 }
 
-/* Responsive Adjustments for Homepage */
-@media (max-aspect-ratio: 1/1) {
-  .gallery-container {
-    width: 90vw;
-    height: 90vw;
+.gallery-item.hidden {
+  opacity: 0;
+}
+
+.gallery-item.visible {
+  opacity: 1;
+}
+
+/* Dynamic Background Elements */
+.dynamic-background {
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+  animation: moveBackground 20s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+  filter: none !important;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translate(0, 0);
   }
-  .logo img {
-    height: clamp(30px, 5vh, 50px);
+  50% {
+    transform: translate(-25%, -25%);
   }
-  .site-title {
-    font-size: clamp(1rem, 3.5vw, 1.8rem);
+  100% {
+    transform: translate(0, 0);
   }
 }
 
-@media (min-aspect-ratio: 16/9) {
-  .gallery-container {
-    width: 75vh;
-    height: 75vh;
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+  .intro-text h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
   }
 }
