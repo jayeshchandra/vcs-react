@@ -9,7 +9,7 @@ const menuItems = [
   { to: '/rules', label: 'Club Rules' },
   { to: '/partners', label: 'Club Partners' },
   {
-    href: 'https://vcs-members.rishav.me/',
+    href: 'https://members.victoriancruisesociety.org/',
     label: 'Members Area',
     external: true,
   },
