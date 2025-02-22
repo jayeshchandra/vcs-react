@@ -30,9 +30,6 @@ const App = () => {
   const options = useMemo(
     () => ({
       background: {
-        color: {
-          value: "#091020",
-        },
       },
       fpsLimit: 144,
       interactivity: {
