@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../gallery_main/vcs-logo-transparent.png'; // Import the logo properly
+import logo from '../gallery_main/vcs-logo-transparent.png'; // Import the main logo
+import instagramIcon from '../gallery_main/vcs-instagram.png'; // Import the Instagram icon
 
 const menuItems = [
   { to: '/', label: 'Home' },
@@ -43,6 +44,14 @@ const Header = () => {
     <header className="navbar">
       <div className="logo">
         <img src={logo} alt="Victorian Cruise Society Logo" loading="VCS" />
+        <a
+          href="https://www.instagram.com/victoriancruisesociety/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="instagram-link"
+        >
+          <img src={instagramIcon} alt="Instagram" className="instagram-icon" />
+        </a>
       </div>
       <div className="site-title">Victorian Cruise Society</div>
       <div className="hamburger-menu">

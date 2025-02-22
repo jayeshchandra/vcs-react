@@ -7,6 +7,7 @@ import About from "./components/about";
 import Events from "./components/events";
 import Partners from "./components/partners";
 import Rules from "./components/rules";
+import ParticlesComponent from './components/DynamicBackground';
 
 function App() {
   return <div className='App'>
@@ -17,6 +18,7 @@ function App() {
       <Route path="partners" element={<Partners />} />
       <Route path="rules" element={<Rules />} />
     </Routes>
+    <ParticlesComponent id="particles" />
   </div>
 }
 

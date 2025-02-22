@@ -53,10 +53,19 @@ html, body {
   align-items: center;
 }
 
+/* Generic logo styling */
 .logo img {
   height: clamp(40px, 6vh, 60px);
   width: auto;
   filter: invert(1);
+}
+
+/* Override for the Instagram icon inside .logo */
+.logo img.instagram-icon {
+  height: clamp(30px, 2.3vh, 9px) !important; /* roughly 70% of the logo size */
+  width: auto;
+  margin-left: 10px;
+  filter: invert(0) !important;
 }
 
 .site-title {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/header.js';
 import Footer from '../components/footer.js';
+import DynamicBackground from '../components/DynamicBackground';
 import '../styles/_global.css';
 import '../styles/home.css';
 
@@ -9,7 +10,7 @@ function importAll(r) {
   return r.keys().map(r);
 }
 
-// Import images (make sure they reside within your source tree for bundling)
+// Import images (ensure they reside within your source tree for bundling)
 const images = importAll(
   require.context('../gallery_main/event_photos/', true, /\.(jpe?g|png|gif)$/)
 );
@@ -20,47 +21,62 @@ function getRandomImage() {
   return imgModule.default || imgModule;
 }
 
-// Utility: Get an array of random images (default count: 9)
-function getRandomImages(count = 9) {
-  const selected = [];
-  for (let i = 0; i < count; i++) {
-    selected.push(getRandomImage());
+// Utility: Get an array of unique random images (default count: 9)
+function getUniqueRandomImages(count = 9) {
+  if (count > images.length) {
+    throw new Error("Not enough unique images available.");
   }
-  return selected;
+  const shuffled = images.slice().sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count).map(img => img.default || img);
 }
 
-// GalleryItem Component: Handles fade-out and fade-in on image change
+// Utility: Get a random image excluding any in the exclusions array
+function getRandomImageExcluding(exclusions) {
+  const availableImages = images.filter(img => {
+    const imgSrc = img.default || img;
+    return !exclusions.includes(imgSrc);
+  });
+  if (availableImages.length === 0) return null;
+  const chosen = availableImages[Math.floor(Math.random() * availableImages.length)];
+  return chosen.default || chosen;
+}
+
+// GalleryItem Component: Uses crossfade animations for smooth transitions
 function GalleryItem({ src, alt }) {
-  const [displaySrc, setDisplaySrc] = useState(src);
-  const [visible, setVisible] = useState(true);
+  const [currentImage, setCurrentImage] = useState(src);
+  const [previousImage, setPreviousImage] = useState(null);
+  const [transitioning, setTransitioning] = useState(false);
 
   useEffect(() => {
-    if (src !== displaySrc) {
-      // Trigger fade-out
-      setVisible(false);
-      // After fade-out completes, update the image and fade in
+    if (src !== currentImage) {
+      setPreviousImage(currentImage);
+      setCurrentImage(src);
+      setTransitioning(true);
       const timeout = setTimeout(() => {
-        setDisplaySrc(src);
-        setVisible(true);
-      }, 300); // 300ms fade-out delay
+        setTransitioning(false);
+        setPreviousImage(null);
+      }, 500); // duration of the crossfade (in ms)
       return () => clearTimeout(timeout);
     }
-  }, [src, displaySrc]);
+  }, [src, currentImage]);
 
   return (
     <div className="gallery-item-container">
+      {previousImage && transitioning && (
+        <img src={previousImage} alt={alt} className="gallery-item fade-out" />
+      )}
       <img
-        className={`gallery-item ${visible ? 'visible' : 'hidden'}`}
-        src={displaySrc}
+        src={currentImage}
         alt={alt}
+        className={`gallery-item ${transitioning ? 'fade-in' : ''}`}
       />
     </div>
   );
 }
 
 const Home = () => {
-  // Initialize grid with 9 random images
-  const [gridImages, setGridImages] = useState(getRandomImages(9));
+  // Initialize grid with 9 unique random images
+  const [gridImages, setGridImages] = useState(getUniqueRandomImages(9));
 
   useEffect(() => {
     // Update one random image every 3 seconds
@@ -68,12 +84,12 @@ const Home = () => {
       setGridImages((prevGrid) => {
         const newGrid = [...prevGrid];
         const indexToUpdate = Math.floor(Math.random() * newGrid.length);
-        let newImage = getRandomImage();
-        // Ensure the new image is different from the current one
-        while (newGrid[indexToUpdate] === newImage && images.length > 1) {
-          newImage = getRandomImage();
+        // Exclude all images currently in the grid except the one being replaced
+        const exclusions = newGrid.filter((img, idx) => idx !== indexToUpdate);
+        const newImage = getRandomImageExcluding(exclusions);
+        if (newImage) {
+          newGrid[indexToUpdate] = newImage;
         }
-        newGrid[indexToUpdate] = newImage;
         return newGrid;
       });
     }, 3000);
@@ -82,25 +98,18 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {/* Dynamic animated background element */}
-      <div className="dynamic-background"></div>
-
-      {/* Fixed header */}
       <Header />
-
       <main className="home-content">
         <section className="intro-text">
           <h1>Welcome to Victorian Cruise Society</h1>
           <h2>Driven by passion, fueled by community.</h2>
         </section>
-
         <section className="gallery-grid">
           {gridImages.map((src, index) => (
             <GalleryItem key={index} src={src} alt={`Gallery ${index + 1}`} />
           ))}
         </section>
       </main>
-
       <Footer />
     </div>
   );

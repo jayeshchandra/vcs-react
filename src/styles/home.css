@@ -1,9 +1,5 @@
-/* Container & Layout */
 .home-container {
   position: relative;
-  background-color: #091020;
-  width: 100%;
-  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -49,47 +45,35 @@
   position: relative;
 }
 
-/* Gallery Item: Fading transitions for image changes */
+/* Gallery Item: Positioned absolutely for crossfade */
 .gallery-item {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.3s ease-in-out;
   opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
-.gallery-item.hidden {
-  opacity: 0;
+/* Fade-in and fade-out animations for smooth crossfade */
+.fade-in {
+  animation: fadeInAnimation 0.5s forwards;
 }
 
-.gallery-item.visible {
-  opacity: 1;
+.fade-out {
+  animation: fadeOutAnimation 0.5s forwards;
 }
 
-/* Dynamic Background Elements */
-.dynamic-background {
-  position: absolute;
-  top: -20%;
-  left: -20%;
-  width: 140%;
-  height: 140%;
-  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
-  animation: moveBackground 20s linear infinite;
-  z-index: 1;
-  pointer-events: none;
-  filter: none !important;
+@keyframes fadeInAnimation {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@keyframes moveBackground {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-25%, -25%);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+@keyframes fadeOutAnimation {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 /* Mobile Responsiveness */
