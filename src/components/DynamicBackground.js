@@ -34,6 +34,10 @@ const App = () => {
         zIndex: -1, // This ensures the particles are rendered behind everything else
       },
       background: {
+        color: {
+          value: "#091020",
+        },
+        zIndex: -1,
         },
       fpsLimit: 144,
       interactivity: {
