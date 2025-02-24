@@ -29,8 +29,12 @@ const App = () => {
 
   const options = useMemo(
     () => ({
-      background: {
+      fullScreen: {
+        enable: true,
+        zIndex: -1, // This ensures the particles are rendered behind everything else
       },
+      background: {
+        },
       fpsLimit: 144,
       interactivity: {
         events: {

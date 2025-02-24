@@ -7,7 +7,7 @@ import '../styles/events.css';
 const eventPhotosContext = require.context(
   '../gallery_main/event_photos',
   true,
-  /\.(jpe?g|png)$/
+  /\.webp$/
 );
 
 // Helper: Filter and sort images for a given folder and extension.
@@ -27,18 +27,18 @@ const eventsData = [
   {
     title: "VCS 1",
     description: "Coldstream to Lake Mountain",
-    images: getImages('vcs1', 'jpeg')
+    images: getImages('vcs1', 'webp')
   },
   {
     title: "VCS 2",
     description: "Lake Mountain",
-    images: getImages('vcs2', 'jpg')
+    images: getImages('vcs2', 'webp')
   },
   {
     title: "VCS 3",
     description:
       "Port Melbourne to Apollo Bay with the final destination of Torquay via Great Ocean Road.",
-    images: getImages('vcs3', 'jpg')
+    images: getImages('vcs3', 'webp')
   }
 ];
 

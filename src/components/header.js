@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../gallery_main/vcs-logo-transparent.png'; // Import the main logo
-import instagramIcon from '../gallery_main/vcs-instagram.png'; // Import the Instagram icon
+import logo from '../gallery_main/vcs-logo-transparent.webp'; // Import the main logo
+import instagramIcon from '../gallery_main/vcs-instagram.webp'; // Import the Instagram icon
 
 const menuItems = [
   { to: '/', label: 'Home' },

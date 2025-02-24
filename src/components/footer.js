@@ -1,5 +1,5 @@
 import React from 'react';
-import chandraLogo from '../gallery_main/chandra_industries/chandra_industries_logo.png'; // Import the logo properly
+import chandraLogo from '../gallery_main/chandra_industries/chandra_industries_logo.webp'; // Import the logo properly
 
 const Footer = () => {
   return (

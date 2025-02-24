@@ -12,7 +12,7 @@ function importAll(r) {
 
 // Import images (ensure they reside within your source tree for bundling)
 const images = importAll(
-  require.context('../gallery_main/event_photos/', true, /\.(jpe?g|png|gif)$/)
+  require.context('../gallery_main/event_photos/', true, /\.webp$/)
 );
 
 // Utility: Get a random image from the imported images

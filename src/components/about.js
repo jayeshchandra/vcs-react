@@ -4,16 +4,16 @@ import Footer from '../components/footer';
 import '../styles/about.css';
 
 // Import images from the src folder
-import vcsLogo from '../gallery_main/vcs-logo-transparent.png';
-import rikashImg from '../gallery_main/admin_cars/rikash.jpg';
-import andyImg from '../gallery_main/admin_cars/andy.jpg';
-import arminImg from '../gallery_main/admin_cars/armin.jpg';
-import romithImg from '../gallery_main/admin_cars/romith.jpg';
-import rayImg from '../gallery_main/admin_cars/ray.jpg';
-import alexImg from '../gallery_main/admin_cars/alex.jpg';
-import anteImg from '../gallery_main/admin_cars/ante.jpg';
-import samImg from '../gallery_main/admin_cars/sam.jpg';
-import christianImg from '../gallery_main/admin_cars/christian.jpg';
+import vcsLogo from '../gallery_main/vcs-logo-transparent.webp';
+import rikashImg from '../gallery_main/admin_cars/rikash.webp';
+import andyImg from '../gallery_main/admin_cars/andy.webp';
+import arminImg from '../gallery_main/admin_cars/armin.webp';
+import romithImg from '../gallery_main/admin_cars/romith.webp';
+import rayImg from '../gallery_main/admin_cars/ray.webp';
+import alexImg from '../gallery_main/admin_cars/alex.webp';
+import anteImg from '../gallery_main/admin_cars/ante.webp';
+import samImg from '../gallery_main/admin_cars/sam.webp';
+import christianImg from '../gallery_main/admin_cars/christian.webp';
 
 const teamMembers = [
   {

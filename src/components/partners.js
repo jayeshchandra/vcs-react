@@ -5,9 +5,9 @@ import '../styles/_global.css';
 import '../styles/partners.css';
 
 // Import partner images from src/gallery_main/partner_photos
-import sequentialImg from '../gallery_main/partner_photos/sequential.jpg';
-import shoyiImg from '../gallery_main/partner_photos/shoyi.jpg';
-import iilumoImg from '../gallery_main/partner_photos/iilumo.jpg';
+import sequentialImg from '../gallery_main/partner_photos/sequential.webp';
+import shoyiImg from '../gallery_main/partner_photos/shoyi.webp';
+import iilumoImg from '../gallery_main/partner_photos/iilumo.webp';
 
 export default function Partners() {
   return (
