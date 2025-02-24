@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Victorian Cruise Society Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Chandra Industries Logo](./src/gallery_main/chandra_industries/chandra_industries_logo.webp)
+### Powered By Chandra Industries
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Who I Am
 
-### `npm start`
+I am Jayesh Chandra, CEO of Chandra Industries. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Why I Did This
 
-### `npm test`
+The Victorian Cruise Society Website was created to serve as a central hub for the society’s community. This project aims to:
+- Showcase the vibrant history and events of the Victorian Cruise Society.
+- Provide easy access to information such as club rules, partner details, and past events.
+- Enhance member engagement through a well-designed, user-friendly platform.
+- Strengthen the society's online presence and community outreach.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Responsive Design:** Optimized for a seamless experience on both desktop and mobile devices.
+- **Interactive Navigation:** Clean, intuitive menus with a hamburger-style dropdown for smaller screens.
+- **Social Media Integration:** Direct links to social channels like Instagram and Facebook.
+- **Member Area Access:** Easy navigation to the exclusive members' portal.
+- **Event Gallery:** A dedicated section to display photos and details of past events.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## To-Do
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [ ] **Implement an Email Contact Form:** Allow users to send inquiries directly from the site.
+- [ ] **Enhance Accessibility:** Improve ARIA support and keyboard navigation.
+- [ ] **Performance Optimization:** Further refine loading times and overall performance.
+- [ ] **Add Interactive Elements:** Introduce more animations and interactive features to enrich user experience.
+- [ ] **SEO Improvements:** Fine-tune metadata and other SEO practices to boost visibility.
+- [ ] **Expand Social Integration:** Integrate additional social media platforms and sharing options.
