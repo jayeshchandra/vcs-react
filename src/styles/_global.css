@@ -105,7 +105,7 @@ html, body {
   position: absolute;
   right: 0;
   top: calc(100% + 5px);
-  background-color: #F6EFDF;
+  background-color: #0d1831f7;
   color: #091020;
   border-radius: 5px;
   overflow: hidden;
@@ -117,12 +117,12 @@ html, body {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #091020;
+  color: #fff;
   font-weight: bold;
 }
 
 .dropdown a:hover {
-  background-color: #ddd;
+  background-color: #091020;
 }
 
 /* FOOTER */
@@ -148,7 +148,7 @@ footer {
   color: #aaa;
   padding: 0;
   margin-top: 1vh;
-  font-size: 0.596rem;
+  font-size: 0.69rem;
   text-align: left;
   display: block;
   margin-bottom: 18px;
@@ -159,4 +159,8 @@ footer {
   cursor: pointer;
   outline: none;
   text-align: left;
+}
+
+footer .terms-conditions p {
+  font-size: 9px !important;
 }

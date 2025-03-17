@@ -1,5 +1,6 @@
 import React from 'react';
 import chandraLogo from '../gallery_main/chandra_industries/chandra_industries_logo.webp'; // Import the logo properly
+import '../styles/_global.css';
 
 const Footer = () => {
   return (

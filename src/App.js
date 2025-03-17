@@ -8,6 +8,7 @@ import Events from "./components/events";
 import Partners from "./components/partners";
 import Rules from "./components/rules";
 import Legal from "./components/legal";
+import CalendarPage from "./components/calendarPage";
 import ParticlesComponent from './components/DynamicBackground';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path="partners" element={<Partners />} />
       <Route path="rules" element={<Rules />} />
       <Route path="legal" element={<Legal />} />
+      <Route path="calendar" element={<CalendarPage />} />
     </Routes>
     <ParticlesComponent id="particles" />
   </div>

@@ -1,0 +1,42 @@
+/* calendarPage.css */
+
+/* Overall page container with a modern gradient background */
+.calendar-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Main content area centered on the page */
+  .calendar-content {
+    flex: 1;
+    padding: 80px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Introductory section styling */
+  .calendar-intro {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .calendar-intro h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .calendar-intro p {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  /* Center the calendar embed and add a subtle shadow */
+  .calendar-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
