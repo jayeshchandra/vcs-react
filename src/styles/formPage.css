@@ -1,0 +1,42 @@
+/* formPage.css */
+
+/* Overall page container with a modern gradient background */
+.form-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Main content area centered on the page */
+  .form-content {
+    flex: 1;
+    padding: 69px 0px 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Introductory section styling */
+  .form-intro {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .form-intro h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .form-intro p {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  /* Center the form embed and add a subtle shadow */
+  .form-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

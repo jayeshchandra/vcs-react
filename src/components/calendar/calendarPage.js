@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/header';
-import Footer from '../components/footer';
-import CalendarComponent from '../components/calendarComponent';
-import '../styles/calendarPage.css';
+import Header from '../../components/header';
+import Footer from '../../components/footer';
+import CalendarComponent from '../calendar/calendarComponent';
+import '../../styles/calendarPage.css';
 
 const CalendarPage = () => {
   return (
