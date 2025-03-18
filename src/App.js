@@ -11,7 +11,6 @@ import Legal from "./components/legal";
 import CalendarPage from "./components/calendar/calendarPage";
 import ParticlesComponent from './components/DynamicBackground';
 import CookieConsentModule from './components/CookieConsent';
-import FormPage from './components/forms/formPage1';
 
 function App() {
   return (
@@ -25,7 +24,6 @@ function App() {
         <Route path="rules" element={<Rules />} />
         <Route path="legal" element={<Legal />} />
         <Route path="calendar" element={<CalendarPage />} />
-        <Route path="poll" element={<FormPage />} />
       </Routes>
       <ParticlesComponent id="particles" />
     </div>
