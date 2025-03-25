@@ -7,7 +7,7 @@ const menuItems = [
   { to: '/events', label: 'Events' },
   { to: '/rules', label: 'Rules' },
   { to: '/partners', label: 'Partners' },
-  { to: '/members', label: 'Members Area' },
+  { href: 'https://www.facebook.com/share/g/19MPWSqHe7/?mibextid=wwXIfr', label: 'Members Area', external: true },
 ];
 
 // Inline menu for when full header fits

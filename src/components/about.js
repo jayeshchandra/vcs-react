@@ -14,6 +14,7 @@ import alexImg from '../gallery_main/admin_cars/alex.webp';
 import anteImg from '../gallery_main/admin_cars/ante.webp';
 import samImg from '../gallery_main/admin_cars/sam.webp';
 import christianImg from '../gallery_main/admin_cars/christian.webp';
+import jayeshImg from '../gallery_main/admin_cars/jayesh.webp';
 
 const teamMembers = [
   {
@@ -69,6 +70,12 @@ const teamMembers = [
     image: christianImg,
     instagram: "https://www.instagram.com/cjn.cars/",
     handle: "@cjn.cars"
+  },
+  {
+    name: "Jayesh Chandra",
+    image: jayeshImg,
+    instagram: "https://www.instagram.com/snooopy_n/",
+    handle: "@snooopy_n"
   }
 ];
 
