@@ -12,7 +12,6 @@ import romithImg from '../gallery_main/admin_cars/romith.webp';
 import rayImg from '../gallery_main/admin_cars/ray.webp';
 import alexImg from '../gallery_main/admin_cars/alex.webp';
 import anteImg from '../gallery_main/admin_cars/ante.webp';
-import samImg from '../gallery_main/admin_cars/sam.webp';
 import christianImg from '../gallery_main/admin_cars/christian.webp';
 import jayeshImg from '../gallery_main/admin_cars/jayesh.webp';
 
@@ -58,12 +57,6 @@ const teamMembers = [
     image: anteImg,
     instagram: "https://www.instagram.com/thata90guy/",
     handle: "@thata90guy"
-  },
-  {
-    name: "Sam Cowan",
-    image: samImg,
-    instagram: "https://www.instagram.com/laag.sam/",
-    handle: "@laag.sam"
   },
   {
     name: "Christian Nicolau",
