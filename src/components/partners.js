@@ -8,6 +8,8 @@ import '../styles/partners.css';
 import sequentialImg from '../gallery_main/partner_photos/sequential.webp';
 import shoyiImg from '../gallery_main/partner_photos/shoyi.webp';
 import iilumoImg from '../gallery_main/partner_photos/iilumo.webp';
+import kaImg from '../gallery_main/partner_photos/ka.webp';
+import cosmicImg from '../gallery_main/partner_photos/cosmic.webp';
 
 export default function Partners() {
   return (
@@ -38,6 +40,18 @@ export default function Partners() {
             link="https://www.instagram.com/iilumo"
             imageSrc={iilumoImg}
             description="Founded in 2018 in Melbourne, Australia, iilumo is passionate about being the market leader for high performance automotive lighting and accessories. Whether you’re upgrading for performance or adding a personal touch, iilumo are your specialists."
+          />
+          <PartnerCard 
+            name="KA Auto Sport"
+            link="https://www.instagram.com/kaautosport"
+            imageSrc={kaImg}
+            description="KA Auto Sport are the experts in aftermarket parts from HKS, SPOON, VOLTEX and GRUPPE-M, and wheels from RAYS, BBS and ADVAN."
+          />
+          <PartnerCard 
+            name="Cosmic Performance"
+            link="https://www.instagram.com/cosmic.performance"
+            imageSrc={cosmicImg}
+            description="Cosmic Performance is a one-stop Performance Garage that caters to all your pride and joy vehicles. Partnering with some of the best performance manufacturers and suppliers, they are able to meet the requests from supplying performance car parts, Installation and automotive engineering as well as Performance and everyday Vehicle ECU Tuning."
           />
         </div>
       </main>
