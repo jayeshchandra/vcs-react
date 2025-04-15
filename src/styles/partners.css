@@ -24,10 +24,13 @@
 
 /* Partner Card Styling */
 .partner-card {
+  display: flex;
+  flex-direction: column;
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .partner-card:hover {
@@ -35,15 +38,15 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.partner-card a {
-  text-decoration: none;
-  color: inherit;
+/* Card Top: holds the image and title */
+.card-top {
+  text-align: center;
 }
 
 .partner-image {
   overflow: hidden;
   border-radius: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .partner-image img {
@@ -53,19 +56,56 @@
   transition: transform 0.3s ease;
 }
 
-.partner-card a:hover .partner-image img {
+.partner-image img:hover {
   transform: scale(1.05);
 }
 
 .partner-card h2 {
-  margin: 10px 0;
+  margin: 0 0 10px 0;
   font-size: 1.5rem;
+}
+
+/* Card Middle: centered description */
+.card-middle {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10px; /* Optional: add horizontal padding if needed */
 }
 
 .partner-card p {
   font-size: 1rem;
   line-height: 1.5;
-  margin-top: 10px;
+  margin: 0;
+}
+
+/* Partner Links Styling */
+.partner-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon-link {
+  display: inline-block;
+}
+
+.icon {
+  width: 32px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.icon-link:hover .icon {
+  transform: scale(1.1);
+}
+
+/* Invert the website icon color */
+.website-icon .icon {
+  filter: invert(100%);
 }
 
 /* Responsive Design */

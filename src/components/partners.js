@@ -12,6 +12,10 @@ import kaImg from '../gallery_main/partner_photos/ka.webp';
 import cosmicImg from '../gallery_main/partner_photos/cosmic.webp';
 import autounionImg from '../gallery_main/partner_photos/autounion.webp';
 
+// Import icon images from ../gallery_main
+import websiteIcon from '../gallery_main/vcs-website.webp';
+import instagramIcon from '../gallery_main/vcs-instagram.webp';
+
 export default function Partners() {
   return (
     <div className="partners-container">
@@ -26,57 +30,87 @@ export default function Partners() {
         <div className="partners-grid">
           <PartnerCard 
             name="Sequential Racing Australia"
-            link="https://www.instagram.com/sequential_racing/"
+            instagram="https://www.instagram.com/sequential_racing/"
+            website="https://sequentialracing.com.au/"
             imageSrc={sequentialImg}
             description="Sequential Racing provides top-quality products and services for automotive enthusiasts, ensuring satisfaction with every purchase. Primarily revolving around the GR Supra platform, Sequential prides itself on delivering exceptional products with reliable performance."
           />
           <PartnerCard 
             name="Shoyi Auto Craft Australia"
-            link="https://www.instagram.com/shoyi.australia/"
+            instagram="https://www.instagram.com/shoyi.australia/"
+            website="https://shoyi.com.au/"
             imageSrc={shoyiImg}
             description="Shoyi is a team of passionate, detail-oriented professionals dedicated to providing exceptional, tailored automotive services, including detailing, tinting, PPF, vinyl, and more. They treat every vehicle with the utmost precision and attention to detail."
           />
           <PartnerCard 
             name="iilumo"
-            link="https://www.instagram.com/iilumo"
+            instagram="https://www.instagram.com/iilumo"
+            website="https://www.iilumo.com/"
             imageSrc={iilumoImg}
             description="Founded in 2018 in Melbourne, Australia, iilumo is passionate about being the market leader for high performance automotive lighting and accessories. Whether you’re upgrading for performance or adding a personal touch, iilumo are your specialists."
           />
           <PartnerCard 
             name="KA Auto Sport"
-            link="https://www.instagram.com/kaautosport"
+            instagram="https://www.instagram.com/kaautosport"
             imageSrc={kaImg}
             description="KA Auto Sport are the experts in aftermarket parts from HKS, SPOON, VOLTEX and GRUPPE-M, and are authorised dealers of wheels from RAYS, BBS and ADVAN."
           />
           <PartnerCard 
             name="Cosmic Performance"
-            link="https://www.instagram.com/cosmic.performance"
+            instagram="https://www.instagram.com/cosmic.performance"
+            website="https://www.cosmicperformance.com/"
             imageSrc={cosmicImg}
-            description="Cosmic Performance is a one-stop Performance Garage that caters to all your pride and joy vehicles. Partnering with some of the best performance manufacturers and suppliers, they are able to meet the requests from supplying performance car parts, Installation and automotive engineering as well as Performance and everyday Vehicle ECU Tuning."
+            description="Cosmic Performance is your all-in-one garage for vehicle upgrades. They work with top manufacturers to supply performance parts, expert installation, automotive engineering, and ECU tuning for everyday and high-performance needs."
           />
           <PartnerCard 
             name="Auto Union Deutsche Independent"
-            link="https://www.instagram.com/autounion.di"
+            instagram="https://www.instagram.com/autounion.di"
+            website="https://www.audservice.com.au/"
             imageSrc={autounionImg}
             description="With over 30 years of expertise, Auto Union specializes in European vehicles, offering comprehensive logbook servicing, maintenance and repairs, tyre services, and expert mechanical and electrical diagnostics for Audi, Volkswagen, Mercedes, BMW and much more."
           />
         </div>
       </main>
+
       <Footer />
     </div>
   );
 }
 
-function PartnerCard({ name, link, imageSrc, description }) {
+function PartnerCard({ name, instagram, website, imageSrc, description }) {
   return (
     <div className="partner-card">
-      <a href={link} target="_blank" rel="noopener noreferrer">
+      <div className="card-top">
         <div className="partner-image">
           <img src={imageSrc} alt={`${name} Photo`} loading="lazy" />
         </div>
         <h2>{name}</h2>
-      </a>
-      <p>{description}</p>
+      </div>
+      <div className="card-middle">
+        <p>{description}</p>
+      </div>
+      <div className="partner-links">
+        {website && (
+          <a
+            href={website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-link website-icon"
+          >
+            <img src={websiteIcon} alt={`${name} Website`} className="icon" />
+          </a>
+        )}
+        {instagram && (
+          <a
+            href={instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-link"
+          >
+            <img src={instagramIcon} alt={`${name} Instagram`} className="icon" />
+          </a>
+        )}
+      </div>
     </div>
   );
 }
