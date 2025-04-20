@@ -33,6 +33,8 @@ The Victorian Cruise Society Website was created to serve as a central hub for t
 
 ## To-Do
 
+- [ ] **Implement pages/blog posts
+- [ ] **Contact us
 - [ ] **Implement an Email Contact Form:** Allow users to send inquiries directly from the site.
 - [ ] **Enhance Accessibility:** Improve ARIA support and keyboard navigation.
 - [ ] **Performance Optimization:** Further refine loading times and overall performance.
