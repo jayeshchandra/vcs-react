@@ -11,6 +11,8 @@ import iilumoImg from '../gallery_main/partner_photos/iilumo.webp';
 import kaImg from '../gallery_main/partner_photos/ka.webp';
 import cosmicImg from '../gallery_main/partner_photos/cosmic.webp';
 import autounionImg from '../gallery_main/partner_photos/autounion.webp';
+import kokaineImg from '../gallery_main/partner_photos/kokaine.webp';
+import zokujImg from '../gallery_main/partner_photos/zokuj.webp';
 
 // Import icon images from ../gallery_main
 import websiteIcon from '../gallery_main/vcs-website.webp';
@@ -69,9 +71,21 @@ export default function Partners() {
             imageSrc={autounionImg}
             description="With over 30 years of expertise, Auto Union specializes in European vehicles, offering comprehensive logbook servicing, maintenance and repairs, tyre services, and expert mechanical and electrical diagnostics for Audi, Volkswagen, Mercedes, BMW and much more."
           />
+          <PartnerCard 
+            name="KOKAINE"
+            instagram="https://www.instagram.com/kokaine.com.au/"
+            website="https://www.kokaine.com/"
+            imageSrc={kokaineImg}
+            description="KOKAINE is a Melbourne streetwear brand blending Japanese-inspired design with car culture, delivering bold, high quality apparel for a passionate community."
+          />
+          <PartnerCard 
+            name="Zokuj"
+            instagram="https://www.instagram.com/zokuj/"
+            imageSrc={zokujImg}
+            description="Zokuj is a professional automotive accessory installer located in South-East Melbourne. Zokuj installs a wide range of car accessories with care and attention to detail. Zokuj is here to help you build the highest version of your car."
+          />
         </div>
       </main>
-
       <Footer />
     </div>
   );

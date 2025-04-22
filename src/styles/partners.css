@@ -45,8 +45,9 @@
 
 .partner-image {
   overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  border-radius: 18px;
+  margin-bottom: 9px;
+  line-height: 0;
 }
 
 .partner-image img {
@@ -54,10 +55,11 @@
   height: auto;
   object-fit: cover;
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .partner-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.018);
 }
 
 .partner-card h2 {
