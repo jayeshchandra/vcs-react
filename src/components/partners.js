@@ -13,6 +13,7 @@ import cosmicImg from '../gallery_main/partner_photos/cosmic.webp';
 import autounionImg from '../gallery_main/partner_photos/autounion.webp';
 import kokaineImg from '../gallery_main/partner_photos/kokaine.webp';
 import zokujImg from '../gallery_main/partner_photos/zokuj.webp';
+import pinnacleImg from '../gallery_main/partner_photos/pinnacle.webp';
 
 // Import icon images from ../gallery_main
 import websiteIcon from '../gallery_main/vcs-website.webp';
@@ -83,6 +84,13 @@ export default function Partners() {
             instagram="https://www.instagram.com/zokuj/"
             imageSrc={zokujImg}
             description="Zokuj is a professional automotive accessory installer located in South-East Melbourne. Zokuj installs a wide range of car accessories with care and attention to detail. Zokuj is here to help you build the highest version of your car."
+          />
+          <PartnerCard 
+            name="Pinnacle Customs"
+            instagram="https://www.instagram.com/pinnacle.customs/"
+            website="https://pinnaclecustoms.com.au/"
+            imageSrc={pinnacleImg}
+            description="Pinnacle Customs is your one-stop-shop everything colour, image and car customisation. With expertise in viny wrapping, window tinting, custom sticker design and car signwriting Melbourne, our team can help you turn your car into a work of art."
           />
         </div>
       </main>
