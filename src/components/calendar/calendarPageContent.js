@@ -6,7 +6,6 @@ import '../../styles/calendarPage.css';
 
 const CalendarPageContent = () => (
   <div className="calendar-page-container">
-    <Header />
     <main className="calendar-content">
       <section className="calendar-intro">
         <h1>VCS Events Calendar</h1>
@@ -16,7 +15,6 @@ const CalendarPageContent = () => (
         <CalendarComponent />
       </section>
     </main>
-    <Footer />
   </div>
 );
 
