@@ -17,58 +17,58 @@ import jayeshImg from '../gallery_main/admin_cars/jayesh.webp';
 
 const teamMembers = [
   {
-    name: "Rikash Singh",
+    name: "Rikash S",
     image: rikashImg,
     instagram: "https://www.instagram.com/rikashss/",
     handle: "@rikashss"
   },
   {
-    name: "Andy Chan",
+    name: "Andy C",
     image: andyImg,
     instagram: "https://www.instagram.com/gr.soup/",
     handle: "@gr.soup"
   },
   {
-    name: "Armin Badir",
+    name: "Armin B",
     image: arminImg,
     instagram: "https://www.instagram.com/mk5.armin/",
     handle: "@mk5.armin"
   },
   {
-    name: "Romith Mawilmada",
+    name: "Romith M",
     image: romithImg,
     instagram: "https://www.instagram.com/rm8.12/",
     handle: "@rm8.12"
   },
   {
-    name: "Ray Puc",
+    name: "Ray P",
     image: rayImg,
     instagram: "https://www.instagram.com/ray.puc/",
     handle: "@ray.puc"
   },
   {
-    name: "Alex Sirinotis",
+    name: "Alex S",
     image: alexImg,
     instagram: "https://www.instagram.com/suprz.4/",
     handle: "@suprz.4"
   },
   {
-    name: "Ante Mucic",
+    name: "Ante M",
     image: anteImg,
     instagram: "https://www.instagram.com/thata90guy/",
     handle: "@thata90guy"
   },
   {
-    name: "Christian Nicolau",
+    name: "Christian N",
     image: christianImg,
     instagram: "https://www.instagram.com/cjn.cars/",
     handle: "@cjn.cars"
   },
   {
-    name: "Jayesh Chandra",
+    name: "Jay C",
     image: jayeshImg,
-    instagram: "https://www.instagram.com/snooopy_n/",
-    handle: "@snooopy_n"
+    instagram: "https://www.instagram.com/",
+    handle: ""
   }
 ];
 
